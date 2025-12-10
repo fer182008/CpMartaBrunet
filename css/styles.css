@@ -120,11 +120,11 @@ body {
 
 /* HERO */
 .hero {
-    background-image: url("../img/fondo-img.jpg"); /* ← Cambia el nombre por tu imagen */
-    background-size: cover;      /* La imagen cubre todo */
-    background-position: center; /* Centrada */
+    background-image: url("../img/fondo-img.jpg"); 
+    background-size: cover;      
+    background-position: center; 
     background-repeat: no-repeat;
-    padding: 120px 20px; /* Aumenta espacio para que el texto respire */
+    padding: 120px 20px; 
     color: white;
     text-align: center;
     position: relative;
@@ -694,6 +694,7 @@ input, textarea {
 
         /* Contenedor general */
 
+
 .section-title{
   text-align: center;
     width: 90%;
@@ -747,6 +748,7 @@ input, textarea {
 .gallery-item {
     text-decoration: none;
     color: #333;
+
 }
 
 .gallery-item h3 {
@@ -903,7 +905,7 @@ input, textarea {
 
 /* Secciones extendidas */
 .nosotros-extendido .container {
-  padding: 40px 0;
+  padding: 10px 0;
   background: rgb(243, 227, 193);
   color: var(--texto);
   border-radius: 20px;
@@ -911,7 +913,7 @@ input, textarea {
 }
 
 .nosotros-extendido h2 {
-  font-size: 2.2rem;
+  font-size: 32px;
   color: var(--azul);
   margin: 40px 0 20px;
   text-align: center;
@@ -919,7 +921,7 @@ input, textarea {
 
 .nosotros-extendido p, 
 .nosotros-extendido li {
-  font-size: 1.1rem;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 1.2rem;
   text-align: justify;
@@ -941,7 +943,6 @@ input, textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
   margin-top: 30px;
 }
 
@@ -1008,7 +1009,7 @@ input, textarea {
 }
 
 .matriculas .mat-desc {
-    max-width: 700px;
+    
     margin: 0 auto 40px;
     font-size: 1.1rem;
     color: #444;
@@ -1201,9 +1202,7 @@ input, textarea {
         border-radius: 8px;
         font-weight: 600;
     }   
-    .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+
        .apo-buttons {
     display: flex;
     flex-direction: column;
@@ -1212,68 +1211,51 @@ input, textarea {
     margin-top: 30px;
     }
       .doc-frame {
-    height: 380px;
+    height: 180px;
   }
   .docs-title {
-    font-size: 26px;
+    font-size: 25px;
   }
-.footer-container{
-    max-width: 720px;
+
+
+
+
+.footer-container {
+    width: 94%;
     margin: auto;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 0.9fr 0.4fr  1fr;
-    gap: 20px;
-    padding-bottom: 10px;
+    display: grid;  
+    grid-template-columns: 0.8fr 1.2fr; 
+    gap: 55px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    text-align: left; 
 }
 
 .footer-container > div:first-child {
-    grid-row: 1 / span 3; /* el número de filas que tengas; ajusta según sea */
-    justify-self: center; /* centra horizontalmente */
-    align-self: center;    /* centra verticalmente */
-    text-align: center;    /* centra el texto y logo dentro */
-    max-width: 260px;   /* ← ajusta este valor a tu gusto */
-    
-}
-
-.footer-container > div:nth-child(3) {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    word-break: break-all; /* fuerza aún más la ruptura si el email es largo */
+ 
+    grid-column: 1; 
+    grid-row: 1 / span 4; 
+    justify-self: center; 
+    align-self: center; 
+    text-align: center; 
+    max-width: 100px; 
 }
 
 
+.footer-col h3 {
+    text-align: left; 
+}
+
+.footer-logo-box {
+    justify-content: center; 
+}
 
 
-   .email-text {
-        display: none;
-    }
 
-   .footer-email a {
-        display: inline-block;
-        background-color: #004aad;   /* color del botón */
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 15px;
-    }
+ 
 
-    .footer-email a::before {
-        content: "Correo";   /* → Texto que se mostrará */
-    }
-
-    /* Ocultar el texto original del correo */
-    .footer-email a {
-        font-size: 0;
-    }
-
-    .footer-email a::before {
-        font-size: 16px;
-    }
    .apo-flex {
-        flex-direction: column;     /* imagen abajo del texto */
+        flex-direction: column;     
         align-items: center;
         text-align: left;
         gap: 20px;
@@ -1281,13 +1263,13 @@ input, textarea {
 
     .apo-text {
         width: 82%;
-        font-size: 16px;            /* tamaño adecuado */
+        font-size: 16px;            
         line-height: 1.5;
     }
 
     .apo-img img {
-        width: 82%;                 /* imagen más pequeña */
-        max-width: 320px;           /* límite para que no sea enorme */
+        width: 82%;                 
+        max-width: 320px;           
         height: auto;
         display: block;
         margin: auto;
@@ -1302,22 +1284,51 @@ input, textarea {
 }
 
   .full-bleed {
-    /* si prefieres que no desborde nunca, usar width:100% aquí */
+    
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     object-fit: cover;
-    max-height: 360px; /* opcional: controla la altura en móviles */
+    max-height: 360px; 
   }
- 
+
+.gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; 
+    width: 100%; 
+    padding: 0 10px; 
+    margin: 30px auto; 
+    overflow: hidden; 
+}
+
+.gallery-item {
+    width: 100%; 
+}
+
+ .org-nivel {
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.org-cargo {
+    width: 90%; 
+    max-width: 300px; 
+    margin: 0 auto; 
+}
+
 }
 
 
 
  
-/* Teléfonos más pequeños (3 columnas) */
+/* Teléfonos más pequeños */
 @media (max-width: 600px) {
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item {
+        width: 100%;
+        text-align: center;
     }
 }
